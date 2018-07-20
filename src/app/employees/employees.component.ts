@@ -12,4 +12,5 @@ export class EmployeesComponent implements OnInit {
   ngOnInit() {
   }
 
+  employees = ['Uposlenik 1', 'Uposlenik 2', 'Uposlenik 3'];
 }

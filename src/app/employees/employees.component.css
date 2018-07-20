@@ -1,0 +1,8 @@
+.employee {
+    
+}
+
+.employees {
+    display: flex;
+    justify-content: center;
+}
