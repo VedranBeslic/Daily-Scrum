@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeesService } from '../shared/employees.service';
 
 @Component({
   selector: 'app-employees',
@@ -9,28 +10,16 @@ export class EmployeesComponent implements OnInit {
 
   searchText = '';
 
-  employees = [
-    {name: 'Uposlenik 1'}, 
-    {name: 'Uposlenik 2'}, 
-    {name: 'Uposlenik 3'}, 
-    {name: 'Uposlenik 4'}, 
-    {name: 'Uposlenik 5'}, 
-    {name: 'Uposlenik 6'}, 
-    {name: 'Uposlenik 7'}, 
-    {name: 'Uposlenik 8'}, 
-    {name: 'Uposlenik 9'}, 
-    {name: 'Uposlenik 1'}, 
-    {name: 'Uposlenik 2'}, 
-    {name: 'Uposlenik 3'}, 
-    {name: 'Uposlenik 4'}, 
-    {name: 'Uposlenik 5'}, 
-    {name: 'Uposlenik 6'}
-  ];
+  employees;
 
-  constructor() { }
+  constructor(private employeesService: EmployeesService) { }
 
   ngOnInit() {
+    this.getEmployees();
   }
 
+  getEmployees(): void {
+    this.employees = this.employeesService.getEmps();
+  }
   
 }

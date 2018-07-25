@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TabsComponent implements OnInit {
 
+  searchText = '';
+  
   constructor() { }
 
   ngOnInit() {

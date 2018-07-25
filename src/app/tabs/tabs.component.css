@@ -5,11 +5,7 @@
 .tab-box {
     margin: 16px;
     padding: 16px;
-    border-radius: 8px;
-    
-    
-}
-.mat-tab-body-content {
-    height: 385px;
+    border-radius: 8px;    
+    height: 360px;
     overflow-y: scroll;
-  }
+}

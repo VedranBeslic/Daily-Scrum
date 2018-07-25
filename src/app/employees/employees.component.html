@@ -1,9 +1,3 @@
-<div class="searchbar">
-  <i class="material-icons">search</i>
-  <input class="search" type="text" 
-    [(ngModel)]="searchText" placeholder="Pretraga">  <!-- &#xe8b6; -->
-</div>
-
 <div class="">
     <div *ngFor="let employee of employees | search:['name', searchText]"> 
       <mat-grid-list cols="8" rowHeight="40px">
