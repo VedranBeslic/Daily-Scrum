@@ -1,10 +1,17 @@
 <mat-tab-group class="mat-tab-box">
   
   <mat-tab label="Lista radnika">
-    <app-header></app-header> Text:{{searchText}}:
-    <div class="tab-box mat-elevation-z4"> <!-- mat-tab-body-content-->
-      <app-employees></app-employees>
+    
+    <div class="searchbar">
+      <i class="material-icons">search</i>
+      <input class="search" type="text" 
+        [(ngModel)]="searchText" placeholder="Pretraga">  <!-- &#xe8b6; -->
     </div>
+
+    <div class="tab-box mat-elevation-z4"> <!-- mat-tab-body-content-->
+      <app-employees [searchText]="searchText"></app-employees>
+    </div>
+
   </mat-tab>
 
   <mat-tab label="Daily scrum">
